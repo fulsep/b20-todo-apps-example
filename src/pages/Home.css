@@ -1,0 +1,108 @@
+:root{
+    --content-width: 400px;
+    --bar-height: 40px;
+}
+
+body, #root{
+    height: 100vh;
+}
+
+.title-bar{
+    position: fixed;
+    top:0;
+    width:var(--content-width);
+    z-index: 2;
+    height: var(--bar-height);
+    background-color: #eee;
+    margin-left: -10px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.title-bar .title{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-bar .left, .title-bar .right{
+    width: var(--bar-height);
+    height: var(--bar-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-bar .left:hover, .title-bar .right:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.content {
+    margin: 0 auto !important;
+    max-width: var(--content-width);
+    min-height: 500px;
+    background-color: #EEE;
+    padding: 10px;
+    padding-top: var(--bar-height);
+    overflow: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.list-todo {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+}
+
+.list-todo a:hover{
+    text-decoration: none;
+}
+
+.list-todo a{
+    flex:1;
+}
+
+.list-todo label{
+    margin-bottom: 0;
+}
+
+.description {
+    min-height: 400px;
+    padding: 10px;
+}
+
+.floating-button {
+    background-image: linear-gradient(rgba(255,255,255,0.5), #FFF);
+    width: var(--content-width);
+    margin-left: -10px;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.floating-button .btn{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    margin-top: -20px;
+}
+
+.floating-button .btn-save {
+    font-size: 14px;
+}
